@@ -292,6 +292,31 @@ public class ChaveValorHandler implements ChaveValor.Iface {
 
     }
 
+    @Override
+    public List<Vertice> listVerticesServer() throws TException {
+        List<Vertice> todosVertices = new ArrayList<>();
+
+        for(int i=0; i < this.getServerAmount(); i++) {
+            List<Vertice> verticesServer;
+
+            if(this.getId() == i) {
+                verticesServer = listaVerticesGrafo();
+            } else {
+                TTransport transport = new TSocket("localhost", this.getInitialPort() + i);
+                TProtocol protocol = new TBinaryProtocol(transport);
+                ChaveValor.Client client = new ChaveValor.Client(protocol);
+                transport.open();
+                verticesServer = client.listaVerticesGrafo();
+
+                transport.close();
+            }
+            todosVertices.addAll(verticesServer);
+        }
+
+        return todosVertices;
+
+    }
+
     public List<Vertice> listaVerticesGrafo() {
         List<Vertice> list = new ArrayList<>();
         System.out.println("Listando todos os vertices do grafo");
@@ -335,15 +360,19 @@ public class ChaveValorHandler implements ChaveValor.Iface {
         return list;
     }
 
-    public List<Aresta> listaArestasVertice(int nome) {
-        List<Aresta> list = new ArrayList<>();
-        //System.out.println("Listando as arestas do vertice "+nome);
-        for (Aresta a : grafo.arestas) {
+    public List<Aresta> listaArestasVertice(int nome) throws TException {
+        List<Aresta> todasArestas = listaArestasGrafo();
+        System.out.println("TODAS ARESTAS " + Arrays.toString(new List[]{todasArestas}));
+
+        List<Aresta> arestas = new ArrayList<>();
+        
+        for (Aresta a : todasArestas) {
             if (a.nomeVertice1 == nome || a.nomeVertice2 == nome) {
-                list.add(a);
+                arestas.add(a);
             }
         }
-        return list;
+
+        return arestas;
     }
 
     public List<Vertice> listaVerticesVizinho(int nome) {
@@ -373,6 +402,11 @@ public class ChaveValorHandler implements ChaveValor.Iface {
         }
 
         return list;
+    }
+
+    @Override
+    public Grafo getGrafo() throws TException {
+        return null;
     }
 
     public int getId() {

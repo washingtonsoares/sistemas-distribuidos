@@ -16,7 +16,7 @@ public class ChaveValorClient {
     public static void main(String[] args) {
         
         try {
-            Integer porta = 2050;
+            Integer porta = 4050;
             String host = "localhost";
             TTransport transport = new TSocket(host, porta);
             transport.open();
@@ -265,7 +265,7 @@ public class ChaveValorClient {
                     case 9: {
                         System.out.println("Listando vértices do grafo");
                         System.out.println();
-                        List<Vertice> vertices = client.listaVerticesGrafo();
+                        List<Vertice> vertices = client.listVerticesServer();
                         for (Vertice ve : vertices) {
                             System.out.println("Nome " + ve.nome + " cor " + ve.cor);
                         }

@@ -2,7 +2,217 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="245509c7-967c-4ab2-aa47-660097d5a98f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chavevalor/chavevalor7.Thrift" afterPath="$PROJECT_DIR$/src/main/java/chavevalor/chavevalor7.Thrift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$1.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$Factory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$Factory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$atualizaAresta_call.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$atualizaAresta_call.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$atualizaVertice_call.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$atualizaVertice_call.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$delAresta_call.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$delAresta_call.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$delVertice_call.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$delVertice_call.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$getAresta_call.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$getAresta_call.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$getVertice_call.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$getVertice_call.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$listaArestasGrafo_call.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$listaArestasGrafo_call.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$listaArestasVertice_call.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$listaArestasVertice_call.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$listaVerticesGrafo_call.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$listaVerticesGrafo_call.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$listaVerticesVizinho_call.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$listaVerticesVizinho_call.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$setAresta_call.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$setAresta_call.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$setVertice_call.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient$setVertice_call.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncClient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncIface.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncIface.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$atualizaAresta$1.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$atualizaAresta$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$atualizaAresta.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$atualizaAresta.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$atualizaVertice$1.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$atualizaVertice$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$atualizaVertice.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$atualizaVertice.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$delAresta$1.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$delAresta$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$delAresta.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$delAresta.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$delVertice$1.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$delVertice$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$delVertice.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$delVertice.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$getAresta$1.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$getAresta$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$getAresta.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$getAresta.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$getVertice$1.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$getVertice$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$getVertice.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$getVertice.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaArestasGrafo$1.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaArestasGrafo$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaArestasGrafo.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaArestasGrafo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaArestasVertice$1.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaArestasVertice$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaArestasVertice.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaArestasVertice.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaVerticesGrafo$1.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaVerticesGrafo$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaVerticesGrafo.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaVerticesGrafo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaVerticesVizinho$1.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaVerticesVizinho$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaVerticesVizinho.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$listaVerticesVizinho.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$setAresta$1.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$setAresta$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$setAresta.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$setAresta.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$setVertice$1.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$setVertice$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$setVertice.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor$setVertice.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$AsyncProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Client$Factory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Client$Factory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Client.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Client.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Iface.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Iface.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$atualizaAresta.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$atualizaAresta.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$atualizaVertice.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$atualizaVertice.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$delAresta.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$delAresta.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$delVertice.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$delVertice.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$getAresta.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$getAresta.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$getVertice.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$getVertice.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$listaArestasGrafo.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$listaArestasGrafo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$listaArestasVertice.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$listaArestasVertice.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$listaVerticesGrafo.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$listaVerticesGrafo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$listaVerticesVizinho.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$listaVerticesVizinho.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$setAresta.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$setAresta.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$setVertice.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor$setVertice.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$Processor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_args$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_args$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_args$atualizaAresta_argsStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_args$atualizaAresta_argsStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_args$atualizaAresta_argsStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_args$atualizaAresta_argsStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_args$atualizaAresta_argsTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_args$atualizaAresta_argsTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_args$atualizaAresta_argsTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_args$atualizaAresta_argsTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_args.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_args.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_result$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_result$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_result$atualizaAresta_resultStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_result$atualizaAresta_resultStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_result$atualizaAresta_resultStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_result$atualizaAresta_resultStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_result$atualizaAresta_resultTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_result$atualizaAresta_resultTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_result$atualizaAresta_resultTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_result$atualizaAresta_resultTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_result.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaAresta_result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_args$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_args$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_args$atualizaVertice_argsStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_args$atualizaVertice_argsStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_args$atualizaVertice_argsStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_args$atualizaVertice_argsStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_args$atualizaVertice_argsTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_args$atualizaVertice_argsTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_args$atualizaVertice_argsTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_args$atualizaVertice_argsTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_args.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_args.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_result$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_result$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_result$atualizaVertice_resultStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_result$atualizaVertice_resultStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_result$atualizaVertice_resultStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_result$atualizaVertice_resultStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_result$atualizaVertice_resultTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_result$atualizaVertice_resultTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_result$atualizaVertice_resultTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_result$atualizaVertice_resultTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_result.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$atualizaVertice_result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_args$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_args$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_args$delAresta_argsStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_args$delAresta_argsStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_args$delAresta_argsStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_args$delAresta_argsStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_args$delAresta_argsTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_args$delAresta_argsTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_args$delAresta_argsTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_args$delAresta_argsTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_args.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_args.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_result$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_result$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_result$delAresta_resultStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_result$delAresta_resultStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_result$delAresta_resultStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_result$delAresta_resultStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_result$delAresta_resultTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_result$delAresta_resultTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_result$delAresta_resultTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_result$delAresta_resultTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_result.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delAresta_result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_args$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_args$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_args$delVertice_argsStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_args$delVertice_argsStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_args$delVertice_argsStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_args$delVertice_argsStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_args$delVertice_argsTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_args$delVertice_argsTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_args$delVertice_argsTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_args$delVertice_argsTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_args.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_args.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_result$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_result$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_result$delVertice_resultStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_result$delVertice_resultStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_result$delVertice_resultStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_result$delVertice_resultStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_result$delVertice_resultTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_result$delVertice_resultTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_result$delVertice_resultTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_result$delVertice_resultTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_result.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$delVertice_result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_args$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_args$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_args$getAresta_argsStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_args$getAresta_argsStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_args$getAresta_argsStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_args$getAresta_argsStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_args$getAresta_argsTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_args$getAresta_argsTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_args$getAresta_argsTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_args$getAresta_argsTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_args.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_args.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_result$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_result$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_result$getAresta_resultStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_result$getAresta_resultStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_result$getAresta_resultStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_result$getAresta_resultStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_result$getAresta_resultTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_result$getAresta_resultTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_result$getAresta_resultTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_result$getAresta_resultTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_result.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getAresta_result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_args$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_args$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_args$getVertice_argsStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_args$getVertice_argsStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_args$getVertice_argsStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_args$getVertice_argsStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_args$getVertice_argsTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_args$getVertice_argsTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_args$getVertice_argsTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_args$getVertice_argsTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_args.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_args.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_result$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_result$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_result$getVertice_resultStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_result$getVertice_resultStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_result$getVertice_resultStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_result$getVertice_resultStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_result$getVertice_resultTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_result$getVertice_resultTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_result$getVertice_resultTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_result$getVertice_resultTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_result.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$getVertice_result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_args$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_args$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_args$listaArestasGrafo_argsStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_args$listaArestasGrafo_argsStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_args$listaArestasGrafo_argsStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_args$listaArestasGrafo_argsStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_args$listaArestasGrafo_argsTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_args$listaArestasGrafo_argsTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_args$listaArestasGrafo_argsTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_args$listaArestasGrafo_argsTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_args.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_args.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_result$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_result$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_result$listaArestasGrafo_resultStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_result$listaArestasGrafo_resultStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_result$listaArestasGrafo_resultStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_result$listaArestasGrafo_resultStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_result$listaArestasGrafo_resultTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_result$listaArestasGrafo_resultTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_result$listaArestasGrafo_resultTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_result$listaArestasGrafo_resultTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_result.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasGrafo_result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_args$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_args$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_args$listaArestasVertice_argsStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_args$listaArestasVertice_argsStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_args$listaArestasVertice_argsStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_args$listaArestasVertice_argsStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_args$listaArestasVertice_argsTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_args$listaArestasVertice_argsTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_args$listaArestasVertice_argsTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_args$listaArestasVertice_argsTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_args.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_args.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_result$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_result$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_result$listaArestasVertice_resultStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_result$listaArestasVertice_resultStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_result$listaArestasVertice_resultStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_result$listaArestasVertice_resultStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_result$listaArestasVertice_resultTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_result$listaArestasVertice_resultTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_result$listaArestasVertice_resultTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_result$listaArestasVertice_resultTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_result.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaArestasVertice_result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_args$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_args$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_args$listaVerticesGrafo_argsStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_args$listaVerticesGrafo_argsStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_args$listaVerticesGrafo_argsStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_args$listaVerticesGrafo_argsStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_args$listaVerticesGrafo_argsTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_args$listaVerticesGrafo_argsTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_args$listaVerticesGrafo_argsTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_args$listaVerticesGrafo_argsTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_args.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_args.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_result$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_result$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_result$listaVerticesGrafo_resultStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_result$listaVerticesGrafo_resultStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_result$listaVerticesGrafo_resultStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_result$listaVerticesGrafo_resultStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_result$listaVerticesGrafo_resultTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_result$listaVerticesGrafo_resultTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_result$listaVerticesGrafo_resultTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_result$listaVerticesGrafo_resultTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_result.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesGrafo_result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_args$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_args$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_args$listaVerticesVizinho_argsStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_args$listaVerticesVizinho_argsStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_args$listaVerticesVizinho_argsStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_args$listaVerticesVizinho_argsStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_args$listaVerticesVizinho_argsTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_args$listaVerticesVizinho_argsTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_args$listaVerticesVizinho_argsTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_args$listaVerticesVizinho_argsTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_args.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_args.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_result$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_result$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_result$listaVerticesVizinho_resultStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_result$listaVerticesVizinho_resultStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_result$listaVerticesVizinho_resultStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_result$listaVerticesVizinho_resultStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_result$listaVerticesVizinho_resultTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_result$listaVerticesVizinho_resultTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_result$listaVerticesVizinho_resultTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_result$listaVerticesVizinho_resultTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_result.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$listaVerticesVizinho_result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_args$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_args$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_args$setAresta_argsStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_args$setAresta_argsStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_args$setAresta_argsStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_args$setAresta_argsStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_args$setAresta_argsTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_args$setAresta_argsTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_args$setAresta_argsTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_args$setAresta_argsTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_args.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_args.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_result$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_result$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_result$setAresta_resultStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_result$setAresta_resultStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_result$setAresta_resultStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_result$setAresta_resultStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_result$setAresta_resultTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_result$setAresta_resultTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_result$setAresta_resultTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_result$setAresta_resultTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_result.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setAresta_result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_args$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_args$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_args$setVertice_argsStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_args$setVertice_argsStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_args$setVertice_argsStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_args$setVertice_argsStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_args$setVertice_argsTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_args$setVertice_argsTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_args$setVertice_argsTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_args$setVertice_argsTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_args.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_args.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_result$_Fields.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_result$_Fields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_result$setVertice_resultStandardScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_result$setVertice_resultStandardScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_result$setVertice_resultStandardSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_result$setVertice_resultStandardSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_result$setVertice_resultTupleScheme.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_result$setVertice_resultTupleScheme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_result$setVertice_resultTupleSchemeFactory.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_result$setVertice_resultTupleSchemeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_result.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor$setVertice_result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValorClient.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValorClient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValorHandler.class" afterPath="$PROJECT_DIR$/target/classes/chavevalor/ChaveValorHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/projetosd-1.0-0.jar" afterPath="$PROJECT_DIR$/target/projetosd-1.0-0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chavevalor/ChaveValor.java" afterPath="$PROJECT_DIR$/src/main/java/chavevalor/ChaveValor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorClient.java" afterPath="$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorHandler.java" afterPath="$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,16 +225,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ChaveValorClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ChaveValorServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorServer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -35,34 +235,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chavevalor7.Thrift" pinned="false" current-in-tab="true">
+      <file leaf-file-name="chavevalor7.Thrift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/chavevalor/chavevalor7.Thrift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+            <state relative-caret-position="946">
+              <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChaveValorHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChaveValorHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-341">
-              <caret line="276" column="13" lean-forward="false" selection-start-line="276" selection-start-column="13" selection-end-line="276" selection-end-column="13" />
+            <state relative-caret-position="-209">
+              <caret line="365" column="0" lean-forward="false" selection-start-line="365" selection-start-column="0" selection-end-line="365" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChaveValorClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-22">
+              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,7 +271,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>del</find>
       <find>listarA</find>
       <find>list</find>
       <find>listaArestasVertice</find>
@@ -96,11 +295,12 @@
       <find>atualiza</find>
       <find>atualizaA</find>
       <find>nomevertice1</find>
-      <find>listaArestasGrafo</find>
       <find>case 8</find>
       <find>delAresta</find>
       <find>delV</find>
       <find>delA</find>
+      <find>listVerticesS</find>
+      <find>listaArestasGrafo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -118,9 +318,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/run.sh" />
         <option value="$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/chavevalor/chavevalor7.Thrift" />
+        <option value="$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorClient.java" />
       </list>
     </option>
   </component>
@@ -372,12 +572,13 @@
       <workItem from="1510768542767" duration="4221000" />
       <workItem from="1510772789800" duration="13000" />
       <workItem from="1510772859371" duration="4585000" />
-      <workItem from="1510778751512" duration="3013000" />
+      <workItem from="1510778751512" duration="5543000" />
+      <workItem from="1510784351617" duration="1066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41046000" />
+    <option name="totallyTimeSpent" value="44642000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="34" width="1920" height="1046" extended-state="6" />
@@ -391,19 +592,19 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52300245" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3765133" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2667026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2667026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39914772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39914772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -432,8 +633,8 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.52300245" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3765133" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2667026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -495,7 +696,7 @@
         <state relative-caret-position="19320">
           <caret line="1288" column="43" lean-forward="false" selection-start-line="1288" selection-start-column="30" selection-end-line="1288" selection-end-column="43" />
           <folding>
-            <marker date="1510777864000" expanded="true" signature="470440:470526" ph="{...}" />
+            <marker date="1510782160000" expanded="true" signature="527234:527292" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -555,7 +756,7 @@
         <state relative-caret-position="19320">
           <caret line="1288" column="43" lean-forward="false" selection-start-line="1288" selection-start-column="30" selection-end-line="1288" selection-end-column="43" />
           <folding>
-            <marker date="1510777864000" expanded="true" signature="470440:470526" ph="{...}" />
+            <marker date="1510782160000" expanded="true" signature="527234:527292" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -587,7 +788,7 @@
         <state relative-caret-position="287">
           <caret line="355" column="35" lean-forward="false" selection-start-line="355" selection-start-column="35" selection-end-line="355" selection-end-column="35" />
           <folding>
-            <marker date="1510777864000" expanded="true" signature="470440:470526" ph="{...}" />
+            <marker date="1510782160000" expanded="true" signature="527234:527292" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -701,7 +902,7 @@
         <state relative-caret-position="19320">
           <caret line="1288" column="43" lean-forward="false" selection-start-line="1288" selection-start-column="30" selection-end-line="1288" selection-end-column="43" />
           <folding>
-            <marker date="1510777864000" expanded="true" signature="470440:470526" ph="{...}" />
+            <marker date="1510782160000" expanded="true" signature="527234:527292" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -761,7 +962,7 @@
         <state relative-caret-position="19320">
           <caret line="1288" column="43" lean-forward="false" selection-start-line="1288" selection-start-column="30" selection-end-line="1288" selection-end-column="43" />
           <folding>
-            <marker date="1510777864000" expanded="true" signature="470440:470526" ph="{...}" />
+            <marker date="1510782160000" expanded="true" signature="527234:527292" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -806,7 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -823,34 +1023,34 @@
         <state relative-caret-position="119">
           <caret line="288" column="0" lean-forward="false" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
           <folding>
-            <marker date="1510777864000" expanded="true" signature="470440:470526" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-341">
-          <caret line="276" column="13" lean-forward="false" selection-start-line="276" selection-start-column="13" selection-end-line="276" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1510782160000" expanded="true" signature="527234:527292" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chavevalor/chavevalor7.Thrift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+        <state relative-caret-position="946">
+          <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/chavevalor/ChaveValorHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-209">
+          <caret line="365" column="0" lean-forward="false" selection-start-line="365" selection-start-column="0" selection-end-line="365" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
