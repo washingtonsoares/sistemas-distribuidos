@@ -1,12 +1,16 @@
 package chavevalor;
 
-import static java.nio.file.Files.list;
 import java.util.ArrayList;
-import static java.util.Collections.list;
+
 import org.apache.thrift.TException;
-import java.util.HashMap;
+
 import java.util.List;
-import chavevalor.*;
+
+import org.apache.thrift.protocol.TBinaryProtocol;
+import org.apache.thrift.protocol.TProtocol;
+import org.apache.thrift.transport.TSocket;
+import org.apache.thrift.transport.TTransport;
+import org.apache.thrift.transport.TTransportException;
 
 public class ChaveValorHandler implements ChaveValor.Iface {
 
@@ -15,142 +19,233 @@ public class ChaveValorHandler implements ChaveValor.Iface {
 
     Grafo grafo = new Grafo(listArestas, listVertices);
 
+    private int id;
+    private int serverAmount;
+    private int port;
+    private int initialPort;
+
+    public ChaveValorHandler(int port, int id, int serverAmount, int initialPort) {
+        this.port = port;
+        this.id = id;
+        this.serverAmount = serverAmount;
+        this.initialPort = initialPort;
+    }
+
     @Override
     public Aresta getAresta(int key) throws TException {
-        for (Aresta a : grafo.arestas) {
+        int server = key % this.getServerAmount();
+        int port =  this.getInitialPort() + server;
+
+        if(server != this.getId()) {
+            TTransport transport = new TSocket("localhost", port);
+            TProtocol protocol = new TBinaryProtocol(transport);
+            ChaveValor.Client client = new ChaveValor.Client(protocol);
+            transport.open();
+            Aresta aresta = client.getAresta(key);
+            transport.close();
+
+            return aresta;
+        } else {
+            for (Aresta a : grafo.arestas) {
             if (a.nome == key) {
-                return a;
+                    return a;
+                }
             }
+            throw new KeyNotFound("Não encontrou aresta");
         }
-        throw new KeyNotFound("Não encontrou aresta");
     }
 
     @Override
     public boolean atualizaAresta(int nomeVertice1, int nomeVertice2, double peso, boolean direcionada, String descricao, int nome) throws TException {
-        //Uma aresta não pode ter seus vértices mudados.
-        for (Aresta g : grafo.arestas) {
-            if (g.nome == nome) {
-                synchronized (g) {
-                    g.setPeso(peso);
-                    g.setDirecionada(direcionada);
-                    g.setDescricao(descricao);
-                }
-                //System.out.println("atualizou aresta");
-            }
-        }
-        //System.out.println("atualizou aresta");
+        int server = nome % this.getServerAmount();
+        int port =  this.getInitialPort() + server;
 
-        return true;
+        if(server != this.getId()) {
+            TTransport transport = new TSocket("localhost", port);
+            TProtocol protocol = new TBinaryProtocol(transport);
+            ChaveValor.Client client = new ChaveValor.Client(protocol);
+            transport.open();
+            boolean updated = client.atualizaAresta(nomeVertice1, nomeVertice2, peso, direcionada, descricao, nome);
+            transport.close();
+
+            return updated;
+        } else {
+            for (Aresta g : grafo.arestas) {
+                if (g.nome == nome) {
+                    synchronized (g) {
+                        g.setPeso(peso);
+                        g.setDirecionada(direcionada);
+                        g.setDescricao(descricao);
+                    }
+                }
+            }
+
+            return true;
+        }
+
     }
 
     @Override
     public boolean setAresta(int nomeVertice1, int nomeVertice2, double peso,
             boolean direcionada, String descricao, int nome) throws TException {
-        boolean vert1 = false;
-        boolean vert2 = false;
-        boolean arestaJaExiste = false;
-        //Uma aresta só pode ser adicionada se ambos os vértices que toca já existirem no grafo.
-        for (Vertice v : grafo.vertices) {
-            if (v.nome == nomeVertice1) {
-                vert1 = true;
+
+        int server = nome % this.getServerAmount();
+        int port =  this.getInitialPort() + server;
+
+        System.out.println("setAresta");
+        System.out.println("server " + server + " porta " + port);
+        System.out.println("ID " + this.getId());
+
+        if(server != this.getId()) {
+            TTransport transport = new TSocket("localhost", port);
+            TProtocol protocol = new TBinaryProtocol(transport);
+            ChaveValor.Client client = new ChaveValor.Client(protocol);
+            transport.open();
+            boolean created = client.setAresta(nomeVertice1, nomeVertice2, peso, direcionada, descricao, nome);
+            transport.close();
+
+            return created;
+
+        } else {
+            boolean arestaJaExiste = false;
+
+            try {
+                getVertice(nomeVertice1);
+                getVertice(nomeVertice2);
+
+                for (Aresta aresta : grafo.arestas) {
+                    if (aresta.nome == nome) {
+                        arestaJaExiste = true;
+                    }
+                }
+
+                if (!arestaJaExiste) {
+                    Aresta aresta = new Aresta(nomeVertice1, nomeVertice2, peso, direcionada, descricao, nome);
+                    grafo.arestas.add(aresta);
+                    return true;
+                }
+
+                return false;
+            } catch (KeyNotFound e) {
+                 System.out.println("Vértice inexistente");
+                 return false;
             }
-            if (v.nome == nomeVertice2) {
-                vert2 = true;
-            }
-
         }
-
-        for (Aresta aresta : grafo.arestas) {
-            if (aresta.nome == nome) {
-                arestaJaExiste = true;
-            }
-        }
-
-        if (vert1 && vert2 && nomeVertice1 != nomeVertice2 && !arestaJaExiste) {
-            Aresta aresta = new Aresta(nomeVertice1, nomeVertice2, peso, direcionada, descricao, nome);
-//            aresta.setNomeVertice1(nomeVertice1);
-//            aresta.setNomeVertice2(nomeVertice2);
-//            aresta.setPeso(peso);
-//            aresta.setDirecionada(direcionada);
-//            aresta.setDescricao(descricao);
-//            aresta.setNome(nome);
-
-            grafo.arestas.add(aresta);
-
-            return true;
-        }
-        return false;
     }
 
     @Override
     public void delAresta(int key) throws TException {
-        System.out.println("entro no del");
+        int server = key % this.getServerAmount();
+        int port =  this.getInitialPort() + server;
 
-        for (int i = 0; i < grafo.arestas.size(); i++) {
-            if (grafo.arestas.get(i).nome == key) {
-                synchronized (grafo.arestas.get(i)) {
-                    System.out.println("vai remover aresta");
-                    grafo.arestas.remove(i);
-                    System.out.println("removeu");
+        if(server != this.getId()) {
+            TTransport transport = new TSocket("localhost", port);
+            TProtocol protocol = new TBinaryProtocol(transport);
+            ChaveValor.Client client = new ChaveValor.Client(protocol);
+            transport.open();
+            client.delAresta(key);
+            transport.close();
+        } else {
+            for (int i = 0; i < grafo.arestas.size(); i++) {
+                if (grafo.arestas.get(i).nome == key) {
+                    synchronized (grafo.arestas.get(i)) {
+                        System.out.println("vai remover aresta");
+                        grafo.arestas.remove(i);
+                        System.out.println("removeu");
+                    }
                 }
             }
         }
+
+
     }
 
     @Override
     public Vertice getVertice(int key) throws TException {
-        for (Vertice v : grafo.vertices) {
-            if (v.nome == key) {
-                return v;
+        int server = key % this.getServerAmount();
+        int port =  this.getInitialPort() + server;
+
+        if(server != this.getId()) {
+            TTransport transport = new TSocket("localhost", port);
+            TProtocol protocol = new TBinaryProtocol(transport);
+            ChaveValor.Client client = new ChaveValor.Client(protocol);
+            transport.open();
+            Vertice vertice = client.getVertice(key);
+            transport.close();
+
+            return vertice;
+        } else {
+            for (Vertice v : grafo.vertices) {
+                if (v.nome == key) {
+                    return v;
+                }
             }
+            throw new KeyNotFound("Não encontrou vertice");
         }
-        //System.out.println("nao encontrou");
-        //KeyNotFound k = new KeyNotFound("nao encontrou");
-        throw new KeyNotFound("Não encontrou vertice");
 
     }
 
     @Override
     public boolean atualizaVertice(int nome, int cor, String descricao, double peso) throws TException {
-        //O nome de um vértice não pode ser alterado.
-        for (Vertice v : grafo.vertices) {
-            if (v.nome == nome) {
-                synchronized (v) {
-                    v.setCor(cor);
-                    v.setPeso(peso);
-                    v.setDescricao(descricao);
-                    System.out.println("atualizou vertice");
+        int server = nome % this.getServerAmount();
+        int port =  this.getInitialPort() + server;
+
+        if(server != this.getId()) {
+            TTransport transport = new TSocket("localhost", port);
+            TProtocol protocol = new TBinaryProtocol(transport);
+            ChaveValor.Client client = new ChaveValor.Client(protocol);
+            transport.open();
+
+            boolean updated = client.atualizaVertice(nome, cor, descricao, peso);
+
+            transport.close();
+
+            return updated;
+        } else {
+            for (Vertice v : grafo.vertices) {
+                if (v.nome == nome) {
+                    synchronized (v) {
+                        v.setCor(cor);
+                        v.setPeso(peso);
+                        v.setDescricao(descricao);
+                        System.out.println("atualizou vertice");
+                    }
                 }
             }
+            return true;
         }
-
-        return true;
     }
 
     @Override
     public boolean setVertice(int nome, int cor, String descricao, double peso) throws TException {
-        //Um vértice só pode ser adicionado se não existir outro com o mesmo nome.
-        boolean add = true;
-        for (Vertice v : grafo.vertices) {
-            //System.out.println("v.nome "+v.nome+ " nome "+nome);
-            //System.out.println(v.nome == nome);
-            if (v.nome == nome) {
-                add = false;
-                break;
+        int server = nome % this.getServerAmount();
+        int port =  this.getInitialPort() + server;
+
+        if(server != this.getId()) {
+            TTransport transport = new TSocket("localhost", port);
+            TProtocol protocol = new TBinaryProtocol(transport);
+            ChaveValor.Client client = new ChaveValor.Client(protocol);
+            transport.open();
+
+            boolean created = client.setVertice(nome, cor, descricao, peso);
+
+            transport.close();
+
+            return created;
+        } else {
+
+            for (Vertice v : grafo.vertices) {
+                if (v.nome == nome) {
+                    return false;
+                }
             }
-        }
-        if (add) {
+
             System.out.println("add " + nome);
-            //List<Aresta> are = new ArrayList<>();
             Vertice vertice = new Vertice(nome, cor, descricao, peso);
-//            vertice.setNome(nome);
-//            vertice.setCor(cor);
-//            vertice.setPeso(peso);
-//            vertice.setDescricao(descricao);
             grafo.vertices.add(vertice);
             return true;
         }
-        return false;
+
     }
 
     @Override
@@ -189,9 +284,31 @@ public class ChaveValorHandler implements ChaveValor.Iface {
         return list;
     }
 
-    public List<Aresta> listaArestasGrafo() {
+    public List<Aresta> listaArestasGrafo() throws TException {
+        List<Aresta> todasArestas = new ArrayList<>();
+
+        for(int i=0; i < this.getServerAmount(); i++) {
+            List<Aresta> arestasServer;
+            if(this.getId() == i) {
+                arestasServer = listaArestasServer();
+            } else {
+                TTransport transport = new TSocket("localhost", this.getInitialPort() + i);
+                TProtocol protocol = new TBinaryProtocol(transport);
+                ChaveValor.Client client = new ChaveValor.Client(protocol);
+                transport.open();
+                // TODO: arestasServer = client.listaArestasServer();
+
+                transport.close();
+            }
+            todasArestas.addAll(null);
+        }
+
+        return todasArestas;
+
+    }
+
+    public List<Aresta> listaArestasServer() {
         List<Aresta> list = new ArrayList<>();
-        //System.out.println("Listando todos as arestas do grafo");
         for (Aresta a : grafo.arestas) {
             list.add(a);
 
@@ -237,5 +354,37 @@ public class ChaveValorHandler implements ChaveValor.Iface {
         }
 
         return list;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getServerAmount() {
+        return serverAmount;
+    }
+
+    public void setServerAmount(int serverAmount) {
+        this.serverAmount = serverAmount;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+
+    public int getInitialPort() {
+        return initialPort;
+    }
+
+    public void setInitialPort(int initialPort) {
+        this.initialPort = initialPort;
     }
 }

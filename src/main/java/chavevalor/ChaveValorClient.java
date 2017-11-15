@@ -16,8 +16,8 @@ public class ChaveValorClient {
     public static void main(String[] args) {
         
         try {
-            Integer porta = Integer.parseInt(args[0]);
-            String host = args[1];
+            Integer porta = 2020;
+            String host = "localhost";
             TTransport transport = new TSocket(host, porta);
             transport.open();
 
@@ -137,6 +137,8 @@ public class ChaveValorClient {
                             System.out.println("Vértice encontrado: ");
                             System.out.println("Nome: " + vertice.getNome() );
                             System.out.println("Peso: " + vertice.getPeso() );
+                            System.out.println("Descricao: " + vertice.getDescricao());
+                            System.out.println("Cor: " + vertice.getCor());
                         } catch (KeyNotFound k) {
                             System.out.println(k.chaveProcurada);
                         }
@@ -155,6 +157,8 @@ public class ChaveValorClient {
                             System.out.println("Aresta encontrada: ");
                             System.out.println("Nome: " + aresta.getNome() );
                             System.out.println("Peso: " + aresta.getPeso() );
+                            System.out.println("Vértice1 :" + aresta.getNomeVertice1());
+                            System.out.println("Vértice2 :" + aresta.getNomeVertice2());
                         } catch (KeyNotFound k) {
                             System.out.println(k.chaveProcurada);
                         }

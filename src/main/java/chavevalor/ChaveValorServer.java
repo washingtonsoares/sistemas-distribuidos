@@ -19,30 +19,21 @@ public class ChaveValorServer {
   public static ChaveValor.Processor processor;
 
   public static void main(String [] args) {
-    int porta = getPorta(args);
+    int porta = Integer.parseInt(args[0]);
+    int id = Integer.parseInt(args[1]);
+    int serverAmount = Integer.parseInt(args[2]);
+    int initialPort = Integer.parseInt(args[3]);
+
     try {
-      handler = new ChaveValorHandler();
+      handler = new ChaveValorHandler(porta, id, serverAmount, initialPort);
       processor = new ChaveValor.Processor(handler);
-      System.out.println("porta "+ porta);
 
       TServerTransport serverTransport = new TServerSocket(porta);
       TServer server = new TThreadPoolServer(new TThreadPoolServer.Args(serverTransport).processor(processor));
-
-      System.out.println("Starting the multi server...");
       server.serve();
 
-    } catch (Exception x) 
-    {
-      x.printStackTrace();
+    } catch (Exception e) {
+      e.printStackTrace();
     }
-  }
-
-  static int getPorta(String[] args) {
-      final Integer PORTA_PADRAO = 9000;
-
-      if(args != null && args.length > 0) {
-          return Integer.parseInt(args[0]);
-      }
-      return  PORTA_PADRAO;
   }
 }

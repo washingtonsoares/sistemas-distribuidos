@@ -1,11 +1,10 @@
 #!/bin/bash
 
 serverAmount=$1
-initialPort=6060
+initialPort=$2
 
-for ((number=1;number <= $serverAmount; number++)){
+for ((number=0; number < $serverAmount; number++)){
   port=$((initialPort+number))
-  echo "$port"
-  mvn exec:java -Dexec.mainClass=chavevalor.ChaveValorServer -Dexec.args="$port" &
+  mvn exec:java -Dexec.mainClass=chavevalor.ChaveValorServer -Dexec.args="$port $number $serverAmount $initialPort" &
 }
 exit 0
