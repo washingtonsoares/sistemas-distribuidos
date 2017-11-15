@@ -39,6 +39,8 @@ service ChaveValor
 	list<Vertice> listaVerticesGrafo(),
 	list<Aresta> listaArestasGrafo(),
 	list<Aresta> listaArestasVertice(1:i32 nome),
-	list<Vertice> listaVerticesVizinho(1:i32 nome)
-	list<Aresta> listaArestasServer()
+	list<Vertice> listaVerticesVizinho(1:i32 nome),
+	list<Aresta> listaArestasServer(),
+	list<Vertice> listVerticesServer(),
+	Grafo getGrafo()
 }  
