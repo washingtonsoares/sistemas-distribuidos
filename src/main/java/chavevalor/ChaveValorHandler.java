@@ -1,9 +1,11 @@
 package chavevalor;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import org.apache.thrift.TException;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.apache.thrift.protocol.TBinaryProtocol;
@@ -250,28 +252,44 @@ public class ChaveValorHandler implements ChaveValor.Iface {
 
     @Override
     public void delVertice(int key) throws TException {
-        //Um vértice, ao ser removido, implica na remoção de todas as arestas que o tocam.
-        for (int i = 0; i < grafo.arestas.size(); i++) {
-            if (grafo.arestas.get(i).nomeVertice1 == key || grafo.arestas.get(i).nomeVertice2 == key) {
-                synchronized (grafo.arestas.get(i)) {
+
+        int server = key % this.getServerAmount();
+        int port =  this.getInitialPort() + server;
+
+        if(server != this.getId()) {
+            TTransport transport = new TSocket("localhost", port);
+            TProtocol protocol = new TBinaryProtocol(transport);
+            ChaveValor.Client client = new ChaveValor.Client(protocol);
+            transport.open();
+
+            client.delVertice(key);
+
+            transport.close();
+        } else {
+            List<Aresta> todasArestas = listaArestasGrafo();
+            //Um vértice, ao ser removido, implica na remoção de todas as arestas que o tocam.
+            for (int i = 0; i < todasArestas.size(); i++) {
+                if (todasArestas.get(i).nomeVertice1 == key || todasArestas.get(i).nomeVertice2 == key) {
                     System.out.println("vai remover aresta");
-                    grafo.arestas.remove(i);
+                    delAresta(todasArestas.get(i).getNome());
                     System.out.println("removeu");
+                }
+            }
+
+            for (int i = 0; i < grafo.vertices.size(); i++) {
+                System.out.println("NOME VERTICE " + grafo.vertices.get(i).nome);
+                if (grafo.vertices.get(i).nome == key) {
+                    synchronized (grafo.vertices.get(i)) {
+                        System.out.println("vai remover vertice");
+                        grafo.vertices.remove(i);
+                        System.out.println("removeu");
+                    }
+                    break;
                 }
             }
         }
 
-        for (int i = 0; i < grafo.vertices.size(); i++) {
-            if (grafo.vertices.get(i).nome == key) {
-                synchronized (grafo.vertices.get(i)) {
-                    System.out.println("vai remover vertice");
-                    grafo.vertices.remove(i);
-                    System.out.println("removeu");
-                }
-                break;
-            }
-        }
-        System.out.println("saiu");
+
     }
 
     public List<Vertice> listaVerticesGrafo() {
@@ -289,6 +307,7 @@ public class ChaveValorHandler implements ChaveValor.Iface {
 
         for(int i=0; i < this.getServerAmount(); i++) {
             List<Aresta> arestasServer;
+
             if(this.getId() == i) {
                 arestasServer = listaArestasServer();
             } else {
@@ -296,11 +315,11 @@ public class ChaveValorHandler implements ChaveValor.Iface {
                 TProtocol protocol = new TBinaryProtocol(transport);
                 ChaveValor.Client client = new ChaveValor.Client(protocol);
                 transport.open();
-                // TODO: arestasServer = client.listaArestasServer();
+                arestasServer = client.listaArestasServer();
 
                 transport.close();
             }
-            todasArestas.addAll(null);
+            todasArestas.addAll(arestasServer);
         }
 
         return todasArestas;

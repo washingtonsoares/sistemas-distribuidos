@@ -16,7 +16,7 @@ public class ChaveValorClient {
     public static void main(String[] args) {
         
         try {
-            Integer porta = 2020;
+            Integer porta = 2050;
             String host = "localhost";
             TTransport transport = new TSocket(host, porta);
             transport.open();
