@@ -16,14 +16,14 @@ public class ChaveValorClient {
     public static void main(String[] args) {
         
         try {
-            Integer porta = 4050;
+            Integer porta = 9090;
             String host = "localhost";
             TTransport transport = new TSocket(host, porta);
             transport.open();
 
             TProtocol protocol = new TBinaryProtocol(transport);
             ChaveValor.Client client = new ChaveValor.Client(protocol);
-            int operacao = 10;
+            int operacao = 1;
             do {
 
                 Scanner ler = new Scanner(System.in);

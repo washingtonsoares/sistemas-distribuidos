@@ -80,6 +80,7 @@ chavevalor/ChaveValor$AsyncClient$getAresta_call.class
 chavevalor/ChaveValor$Processor$listaVerticesGrafo.class
 chavevalor/KeyNotFound$KeyNotFoundTupleSchemeFactory.class
 chavevalor/ChaveValor$getAresta_result$getAresta_resultStandardScheme.class
+chavevalor/ChaveValorServerTest.class
 chavevalor/ChaveValor$listaArestasServer_result$_Fields.class
 chavevalor/ChaveValor$setAresta_result$setAresta_resultStandardSchemeFactory.class
 chavevalor/ChaveValor$listaArestasVertice_result$listaArestasVertice_resultTupleScheme.class
@@ -169,12 +170,14 @@ chavevalor/ChaveValor$atualizaAresta_result$atualizaAresta_resultStandardScheme.
 chavevalor/ChaveValor$getAresta_args$getAresta_argsTupleSchemeFactory.class
 chavevalor/ChaveValor$getVertice_result$_Fields.class
 chavevalor/ChaveValor$AsyncProcessor$atualizaAresta.class
+chavevalor/GetVerticeQuery.class
 chavevalor/KeyNotFound$KeyNotFoundStandardScheme.class
 chavevalor/ChaveValor$getGrafo_args$getGrafo_argsStandardSchemeFactory.class
 chavevalor/ChaveValor$getGrafo_args$getGrafo_argsStandardScheme.class
 chavevalor/ChaveValor$AsyncProcessor$getAresta.class
 chavevalor/ChaveValor.class
 chavevalor/ChaveValor$AsyncProcessor$listVerticesServer$1.class
+chavevalor/SetVerticeCommand.class
 chavevalor/ChaveValor$AsyncProcessor$listaArestasVertice.class
 chavevalor/ChaveValor$AsyncProcessor$listVerticesServer.class
 chavevalor/ChaveValor$AsyncClient$atualizaVertice_call.class
@@ -185,6 +188,7 @@ chavevalor/ChaveValor$setVertice_args$setVertice_argsTupleScheme.class
 chavevalor/ChaveValor$delVertice_result$delVertice_resultStandardSchemeFactory.class
 chavevalor/ChaveValor$setVertice_result.class
 chavevalor/ChaveValor$listaArestasGrafo_result$listaArestasGrafo_resultTupleScheme.class
+chavevalor/MapStateMachine.class
 chavevalor/ChaveValor$listaVerticesVizinho_result$listaVerticesVizinho_resultTupleScheme.class
 chavevalor/ChaveValor$getGrafo_result.class
 chavevalor/ChaveValor$atualizaVertice_args$atualizaVertice_argsTupleSchemeFactory.class
@@ -252,6 +256,7 @@ chavevalor/ChaveValor$listaArestasServer_args$_Fields.class
 chavevalor/ChaveValor$AsyncProcessor$listaArestasGrafo$1.class
 chavevalor/ChaveValor$Processor$setAresta.class
 chavevalor/ChaveValor$1.class
+chavevalor/MapClient.class
 chavevalor/ChaveValor$AsyncClient$setVertice_call.class
 chavevalor/ChaveValor$listaVerticesVizinho_result$_Fields.class
 chavevalor/ChaveValor$listaVerticesVizinho_result$listaVerticesVizinho_resultStandardSchemeFactory.class
