@@ -54,7 +54,7 @@ public class ChaveValorHandler implements ChaveValor.Iface {
 //    }
     @Override
     public Aresta getAresta(int key) throws TException {
-        int server = key % this.getServerAmount();
+        int server = chaveMultiplicacao(key);
         int port = this.getInitialPort() + server;
 
         if (server != this.getId()) {
@@ -67,18 +67,43 @@ public class ChaveValorHandler implements ChaveValor.Iface {
 
             return aresta;
         } else {
-            for (Aresta a : grafo.arestas) {
-                if (a.nome == key) {
-                    return a;
-                }
+            CopycatClient.Builder builder = CopycatClient.builder()
+                    .withTransport(NettyTransport.builder()
+                            .withThreads(4)
+                            .build());
+            CopycatClient client = builder.build();
+
+            CompletableFuture<CopycatClient> future = client.connect(addresses);
+            future.join();
+
+            try {
+                System.out.println("buscando aresta ");
+                Aresta a = client.submit(new GetArestaQuery(key)).get();
+                System.out.println("retornou: " + a.nome);
+                return a;
+            } catch (Exception e) {
+                System.out.println("Commands may have failed.");
+                e.printStackTrace();
             }
+//            for (Aresta a : grafo.arestas) {
+//                if (a.nome == key) {
+//                    return a;
+//                }
+//            }
             throw new KeyNotFound("Não encontrou aresta");
         }
     }
 
+    private int chaveMultiplicacao(int key) {
+        double hash = 0.6180339887;
+        double val = key *hash;
+        val = val - (int)val;
+        return (int)(this.getServerAmount() * val);
+    }
+
     @Override
     public boolean atualizaAresta(int nomeVertice1, int nomeVertice2, double peso, boolean direcionada, String descricao, int nome) throws TException {
-        int server = nome % this.getServerAmount();
+        int server = chaveMultiplicacao(nome);
         int port = this.getInitialPort() + server;
 
         if (server != this.getId()) {
@@ -91,6 +116,33 @@ public class ChaveValorHandler implements ChaveValor.Iface {
 
             return updated;
         } else {
+
+            System.out.println("entrou no copycat");
+            CopycatClient.Builder builder = CopycatClient.builder()
+                    .withTransport(NettyTransport.builder()
+                            .withThreads(4)
+                            .build());
+            System.out.println("chegou aqui");
+            CopycatClient client = builder.build();
+
+            CompletableFuture<CopycatClient> future = client.connect(addresses);
+            future.join();
+
+            CompletableFuture[] futures = new CompletableFuture[1];
+
+            try {
+                futures[0] = client.submit(new PutArestaCommand(nomeVertice1, nomeVertice2, peso,
+                        direcionada, descricao, nome));
+                //futures[1] = client.submit(new AddVertexCommand(2,2, "world! Hello"));
+                //futures[2] = client.submit(new AddEdgeCommand(1,2, "Edge"));
+
+                CompletableFuture.allOf(futures).thenRun(() -> System.out.println("Commands completed!"));
+
+            } catch (Exception e) {
+                System.out.println("Commands may have failed.");
+                e.printStackTrace();
+            }
+
             for (Aresta g : grafo.arestas) {
                 if (g.nome == nome) {
                     synchronized (g) {
@@ -110,7 +162,7 @@ public class ChaveValorHandler implements ChaveValor.Iface {
     public boolean setAresta(int nomeVertice1, int nomeVertice2, double peso,
             boolean direcionada, String descricao, int nome) throws TException {
 
-        int server = nome % this.getServerAmount();
+        int server = chaveMultiplicacao(nome);
         int port = this.getInitialPort() + server;
 
         System.out.println("setAresta");
@@ -138,11 +190,39 @@ public class ChaveValorHandler implements ChaveValor.Iface {
                 getVertice(nomeVertice2);
 
                 for (Aresta aresta : grafo.arestas) {
-                    if (aresta.nome == nome || (aresta.nomeVertice1 == nomeVertice1 && aresta.nomeVertice2 == nomeVertice2)) {
+                    if (aresta.nome == nome || (aresta.nomeVertice1 == nomeVertice1 && aresta.nomeVertice2 == nomeVertice2)
+                            || (aresta.nomeVertice2 == nomeVertice1 && aresta.nomeVertice1 == nomeVertice2)) {
                         arestaJaExiste = true;
                     }
                 }
                 if (!arestaJaExiste) {
+
+                    System.out.println("entrou no copycat");
+                    CopycatClient.Builder builder = CopycatClient.builder()
+                            .withTransport(NettyTransport.builder()
+                                    .withThreads(4)
+                                    .build());
+                    System.out.println("chegou aqui");
+                    CopycatClient client = builder.build();
+
+                    CompletableFuture<CopycatClient> future = client.connect(addresses);
+                    future.join();
+
+                    CompletableFuture[] futures = new CompletableFuture[1];
+
+                    try {
+                        futures[0] = client.submit(new SetArestaCommand(nomeVertice1, nomeVertice2, peso,
+                                direcionada, descricao, nome));
+                        //futures[1] = client.submit(new AddVertexCommand(2,2, "world! Hello"));
+                        //futures[2] = client.submit(new AddEdgeCommand(1,2, "Edge"));
+
+                        CompletableFuture.allOf(futures).thenRun(() -> System.out.println("Commands completed!"));
+
+                    } catch (Exception e) {
+                        System.out.println("Commands may have failed.");
+                        e.printStackTrace();
+                    }
+
                     Aresta aresta = new Aresta(nomeVertice1, nomeVertice2, peso, direcionada, descricao, nome);
                     grafo.arestas.add(aresta);
                     return true;
@@ -158,7 +238,7 @@ public class ChaveValorHandler implements ChaveValor.Iface {
 
     @Override
     public void delAresta(int key) throws TException {
-        int server = key % this.getServerAmount();
+        int server = chaveMultiplicacao(key);
         int port = this.getInitialPort() + server;
 
         if (server != this.getId()) {
@@ -169,6 +249,32 @@ public class ChaveValorHandler implements ChaveValor.Iface {
             client.delAresta(key);
             transport.close();
         } else {
+            
+            System.out.println("entrou no copycat");
+                    CopycatClient.Builder builder = CopycatClient.builder()
+                            .withTransport(NettyTransport.builder()
+                                    .withThreads(4)
+                                    .build());
+                    System.out.println("chegou aqui");
+                    CopycatClient client = builder.build();
+
+                    CompletableFuture<CopycatClient> future = client.connect(addresses);
+                    future.join();
+
+                    CompletableFuture[] futures = new CompletableFuture[1];
+
+                    try {
+                        futures[0] = client.submit(new RemoveArestaCommand(key));
+                        //futures[1] = client.submit(new AddVertexCommand(2,2, "world! Hello"));
+                        //futures[2] = client.submit(new AddEdgeCommand(1,2, "Edge"));
+
+                        CompletableFuture.allOf(futures).thenRun(() -> System.out.println("Commands completed!"));
+
+                    } catch (Exception e) {
+                        System.out.println("Commands may have failed.");
+                        e.printStackTrace();
+                    }
+            
             for (int i = 0; i < grafo.arestas.size(); i++) {
                 if (grafo.arestas.get(i).nome == key) {
                     synchronized (grafo.arestas.get(i)) {
@@ -184,7 +290,7 @@ public class ChaveValorHandler implements ChaveValor.Iface {
 
     @Override
     public Vertice getVertice(int key) throws TException {
-        int server = key % this.getServerAmount();
+        int server = chaveMultiplicacao(key);
         int port = this.getInitialPort() + server;
 
         if (server != this.getId()) {
@@ -227,7 +333,7 @@ public class ChaveValorHandler implements ChaveValor.Iface {
 
     @Override
     public boolean atualizaVertice(int nome, int cor, String descricao, double peso) throws TException {
-        int server = nome % this.getServerAmount();
+        int server = chaveMultiplicacao(nome);
         int port = this.getInitialPort() + server;
 
         if (server != this.getId()) {
@@ -242,6 +348,32 @@ public class ChaveValorHandler implements ChaveValor.Iface {
 
             return updated;
         } else {
+
+            System.out.println("entrou no copycat");
+            CopycatClient.Builder builder = CopycatClient.builder()
+                    .withTransport(NettyTransport.builder()
+                            .withThreads(4)
+                            .build());
+            System.out.println("chegou aqui");
+            CopycatClient client = builder.build();
+
+            CompletableFuture<CopycatClient> future = client.connect(addresses);
+            future.join();
+
+            CompletableFuture[] futures = new CompletableFuture[1];
+
+            try {
+                futures[0] = client.submit(new PutVerticeCommand(nome, cor, descricao, peso));
+                //futures[1] = client.submit(new AddVertexCommand(2,2, "world! Hello"));
+                //futures[2] = client.submit(new AddEdgeCommand(1,2, "Edge"));
+
+                CompletableFuture.allOf(futures).thenRun(() -> System.out.println("Commands completed!"));
+
+            } catch (Exception e) {
+                System.out.println("Commands may have failed.");
+                e.printStackTrace();
+            }
+
             for (Vertice v : grafo.vertices) {
                 if (v.nome == nome) {
                     synchronized (v) {
@@ -258,11 +390,11 @@ public class ChaveValorHandler implements ChaveValor.Iface {
 
     @Override
     public boolean setVertice(int nome, int cor, String descricao, double peso) throws TException {
-        int server = nome % this.getServerAmount();
+        int server = chaveMultiplicacao(nome);
         int port = this.getInitialPort() + server;
 
         if (server != this.getId()) {
-            System.out.println("entrou no if, server:"+ server);
+            System.out.println("entrou no if, server:" + server);
             TTransport transport = new TSocket("localhost", port);
             TProtocol protocol = new TBinaryProtocol(transport);
             ChaveValor.Client client = new ChaveValor.Client(protocol);
@@ -283,7 +415,7 @@ public class ChaveValorHandler implements ChaveValor.Iface {
             System.out.println("entrou no copycat");
             CopycatClient.Builder builder = CopycatClient.builder()
                     .withTransport(NettyTransport.builder()
-                            .withThreads(3)
+                            .withThreads(4)
                             .build());
             System.out.println("chegou aqui");
             CopycatClient client = builder.build();
@@ -316,7 +448,7 @@ public class ChaveValorHandler implements ChaveValor.Iface {
     @Override
     public void delVertice(int key) throws TException {
 
-        int server = key % this.getServerAmount();
+        int server = chaveMultiplicacao(key);
         int port = this.getInitialPort() + server;
 
         if (server != this.getId()) {

@@ -1,5 +1,6 @@
 package chavevalor;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import org.apache.thrift.server.TServer;
 import org.apache.thrift.transport.TServerSocket;
@@ -31,7 +32,7 @@ public class ChaveValorServer {
 //                String[] args0 = new String[]{Integer.toString(i), "localhost", "9091", "localhost", "9092"};
 //                MapStateMachine.main(args0);
 //            }
-            String[] args1 = new String[]{"2", "localhost", "5000", "localhost", "5001", "localhost", "5002"};
+            String[] args1 = Arrays.copyOfRange(args, 4, args.length);//  new String[]{"2", "localhost", "5000", "localhost", "5001", "localhost", "5002"};
             //MapStateMachine.main(args1);
             
             //String[] argsHandler = new String[]{"localhost", "9091", "localhost", "9092"};
